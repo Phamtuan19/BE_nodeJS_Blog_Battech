@@ -3,6 +3,16 @@
    "buildCommand": "npm run build",
    "devCommand": "npm run dev",
    "outputDirectory": "dist",
-   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-   "routes": [{ "src": "/(.*)", "dest": "app.js" }]
+   "builds": [
+      {
+         "src": "dist/bundle.js",
+         "use": "@vercel/node"
+      }
+   ],
+   "routes": [
+      {
+         "src": "/(.*)",
+         "dest": "dist/bundle.js"
+      }
+   ]
 }
