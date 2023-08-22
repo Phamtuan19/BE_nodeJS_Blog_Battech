@@ -5,14 +5,14 @@
    "outputDirectory": "dist",
    "builds": [
       {
-         "src": "dist/bundle.js",
+         "src": "*.js",
          "use": "@vercel/node"
       }
    ],
    "routes": [
       {
          "src": "/(.*)",
-         "dest": "dist/bundle.js"
+         "dest": "/"
       }
    ]
 }
