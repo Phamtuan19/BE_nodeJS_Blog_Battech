@@ -1,0 +1,34 @@
+// {
+//    "version": 2,
+//    "buildCommand": "npm run build",
+//    "devCommand": "npm run dev",
+//    "outputDirectory": "dist",
+//    "builds": [
+//       {
+//          "src": "dist/bundle.js",
+//          "use": "@vercel/node"
+//       }
+//    ],
+//    "routes": [
+//       {
+//          "src": "/(.*)",
+//          "dest": "/"
+//       }
+//    ]
+// }
+
+{
+   "version": 2,
+   "builds": [
+      {
+         "src": "./app.js",
+         "use": "@vercel/node"
+      }
+   ],
+   "routes": [
+      {
+         "src": "/(.*)",
+         "dest": "/"
+      }
+   ]
+}
